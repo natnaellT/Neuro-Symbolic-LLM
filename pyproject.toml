@@ -62,7 +62,7 @@ where = ["."]
 include = [
     "fabricpc_ext*",
     "nac*",
-    "tier2_mork*",
+    "tier2_retrieval*",
     "parser*",
     "embedder*",
     "tier3*",
@@ -105,7 +105,7 @@ ignore = [
 known-first-party = [
     "fabricpc_ext",
     "nac",
-    "tier2_mork",
+    "tier2_retrieval",
     "parser",
     "embedder",
     "tier3",
