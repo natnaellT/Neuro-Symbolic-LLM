@@ -68,9 +68,8 @@ semantic-parser = "parser.semantic.semantic_parser:main"
 [tool.setuptools.packages.find]
 where = ["."]
 include = [
-    "fabricpc_ext*",
     "nac*",
-    "tier2_retrieval*",
+    "tier2_mork*",
     "parser*",
     "embedder*",
     "tier3*",
@@ -111,9 +110,8 @@ ignore = [
 [tool.ruff.lint.isort]
 # tells ruff which packages are "yours" so imports are sorted into the right group
 known-first-party = [
-    "fabricpc_ext",
     "nac",
-    "tier2_retrieval",
+    "tier2_mork",
     "parser",
     "embedder",
     "tier3",
