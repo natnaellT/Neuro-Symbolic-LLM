@@ -36,7 +36,7 @@ class FakeBackend:
     ) -> None:
         self.output = output
         self.error = error
-        self.calls = []
+        self.calls: list[dict[str, str]] = []
 
     def generate(self, *, prompt: str, model: str) -> str:
         self.calls.append({"prompt": prompt, "model": model})

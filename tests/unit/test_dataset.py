@@ -29,7 +29,9 @@ def make_parser():
             .split("\n</sentence>", maxsplit=1)[0]
             .strip()
         )
-        return outputs.get(sentence, "UNSUPPORTED")
+        res = outputs.get(sentence, "UNSUPPORTED")
+        assert isinstance(res, str)
+        return res
 
     return ReferenceSemanticParser(
         backend=CallableBackend(
