@@ -1,18 +1,15 @@
-# Three-Tier Hardware Architecture Configuration
-# SingularityNET Neuro-Symbolic PC-Residual Architecture
-
 tier1_gpu:
   framework: "JAX/Flax"
   precision: "bf16"
   batch_size: 16
   seq_len: 512
-  model_scale: "117M" # GPT-2 Small baseline / Llama 7B
+  model_scale: "117M"
   attached_layers: [20, 24, 28, 31] # Late layers carrying symbolic heads
 
 tier2_cpu:
   host: "localhost"
   port: 8000
-  dim: 256 # Symbolic key/value dimension k
+  dim: 256
   space: "cosine"
   max_capacity: 100000
   hnsw:
