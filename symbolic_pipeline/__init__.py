@@ -1,5 +1,15 @@
-"""Symbolic Pipeline Package.
+"""SymbolicHead wrapper and alignment losses."""
 
-Provides neural-symbolic heads and loss functions integrating dense neural hidden states
-with Tier 2 MORK sparse hypergraph symbolic reasoning.
-"""
+from symbolic_pipeline.head import SymbolicHead
+from symbolic_pipeline.losses import (
+    combined_symbolic_loss,
+    key_space_alignment_loss,
+    value_space_regression_loss,
+)
+
+__all__ = [
+    "SymbolicHead",
+    "combined_symbolic_loss",
+    "key_space_alignment_loss",
+    "value_space_regression_loss",
+]
